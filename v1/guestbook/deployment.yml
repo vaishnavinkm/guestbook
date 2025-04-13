@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook
   labels:
-    app: guestbook 
+    app: guestbook
 spec:
   replicas: 1
   selector:
@@ -20,7 +20,7 @@ spec:
         app: guestbook
     spec:
       containers:
-      - image: us.icr.io/sn-labs-vaishnavinik<your sn labs namespace>/guestbook:v1
+      - image: us.icr.io/sn-labs-vaishnavinik/guestbook:v1
         imagePullPolicy: Always
         name: guestbook
         ports:
@@ -30,5 +30,4 @@ spec:
           limits:
             cpu: 50m
           requests:
-            cpu: 20m  
-  replicas: 1
+            cpu: 20m
